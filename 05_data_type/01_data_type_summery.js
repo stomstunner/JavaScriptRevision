@@ -17,6 +17,8 @@ console.log(bigNumber);
 // Reference (Non primitive)
 
 // Array, Objects, Functions
+// in sabhi ka ager ham deta type nikale toh object hi aat hai 
+// per ha fucntion ka datatype function aata hai per usse ham object function bolte hai 
 
 const heros = ["Superman", "Batman", "Spiderman", "Ironman", "Thor", "Loki"]
 const myObject = {
@@ -30,5 +32,8 @@ const myFunction = function(){
 console.log(heros);
 console.log(myObject);
 myFunction()
+
+console.log(typeof myFunction); // function  
+
 
 
