@@ -33,7 +33,7 @@ console.log(heros);
 console.log(myObject);
 myFunction()
 
-console.log(typeof myFunction); // function  
+console.log(typeof myFunction); // function hi 
 
 
 
