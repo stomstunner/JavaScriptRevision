@@ -6,7 +6,14 @@ let obj = {
     class : "BCA"
 }
 // we have to use for in loop for objects
-for( let key in obj){
-    console.log(key);
-    // isse ham keys ko print kar sakte hai using the for in loop 
+// for( let key in obj){
+//     console.log(key);
+//     // isse ham keys ko print kar sakte hai using the for in loop 
+// }
+
+// if we want ki ham print kare key and uske ander ke vlues ko bhi then we use this method 
+
+for (let key in obj ){
+    console.log(`${key} -> ${obj[key]}`);
+    
 }
