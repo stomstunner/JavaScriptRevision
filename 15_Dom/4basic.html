@@ -55,5 +55,33 @@
     addLanguageOptimize("hello")
     addLanguageOptimize("hello")
     
+
+    //  now we want ki hama apne text ko edit bhi kar paye optimize trike se  
+    // const secondLang  = document.querySelector('li')
+    // console.log(secondLang);
+    // secondLang.innerHTML = "helloujjwal"
+    // //  but this is not a optimize way to to it 
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang);
+    
+    const newLi = document.createElement('li')
+    newLi.textContent = "stomstunner"
+    // jo hamra pahle se bana hua eleemt hai uske text ko ham nayewla se replace karnege
+    secondLang.replaceWith(newLi)
+    
+
+    // lets do the another example of the edit 
+    const firstchild = document.querySelector('li:first-Child')
+    console.log(firstchild);
+    const newLi1 = document.createElement("li")
+    newLi1.textContent = "Typescript"
+    firstchild.replaceWith(newLi1)
+
+    // now we can edit by writing the whole tml tag 
+    const firstChild1 = document.querySelector('li')
+    firstChild1.outerHTML = "<li>TYPESCRIPT</li>"
+    
+    
 </script>
 </html>
