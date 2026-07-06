@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Function</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class ='language'>
+        <li>
+            javascript
+        </li>
+    </ul>
+</body>
+<script>
+    // here we make a function that acpet the text and show it on the page 
+    // seclect the ul 
+    const myul = document.querySelector(".language")
+    // console.log(myul);
+    function addLanguage(language){
+        // so we are creating a elemet 
+        const li = document.createElement('li')
+        // then we are adding the paramenter to the inner html 
+        li.innerHTML = `${language}`
+        // now we show the text to the page decument
+        document.querySelector('.language').appendChild(li)
+    }
+
+    // now we call the function 
+    addLanguage("python")
+    addLanguage("ujjwal")
+    addLanguage("ujjwal")
+    
+</script>
+</html>
