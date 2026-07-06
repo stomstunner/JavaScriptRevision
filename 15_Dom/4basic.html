@@ -30,6 +30,30 @@
     addLanguage("python")
     addLanguage("ujjwal")
     addLanguage("ujjwal")
+
+    // lets do the more optimize way to do that so it can reduce the tree traversal 
+    function addLanguageOptimize(langName){
+        // first we write the basic function structure
+        // then we make a  variable that store the way to create a elemet
+
+        // const li = document.createElement('li')
+
+        // // then we make a variable that create a textnode with the paramenter from th user 
+
+        // const addText = document.createTextNode(langName)
+
+        // // then we just appen the text to the li variable that has the code to create element and in the li we append the text node as a a child
+
+        // li.appendChild(addText)
+
+        // or
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addLanguageOptimize("hello")
+    addLanguageOptimize("hello")
     
 </script>
 </html>
