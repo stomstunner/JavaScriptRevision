@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stomstunner</title>
+</head>
+<body style="background-color: #212121; color:white">
+</body>
+
+<script>
+    // here we create a new element from stract and add the attributes one b one 
+
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = 'div-class'
+    // div.id = 'div-Id'
+    div.id = Math.round(Math.random() * 10 +1);
+    div.setAttribute("class","ujjwal")
+    div.style.backgroundColor = "green"
+    div.style.padding = "5px"
+    div.style.border = "5px"
+    div.style.borderRadius = "10px"
+
+    // div.innerText = "Mera naam ujjwal hai"
+
+    const addText = document.createTextNode('mera naam ujjwal hai')
+    div.appendChild(addText)
+
+    // now we have to show our created div to the pass we jaust have to sppend on the doument body 
+    document.body.appendChild(div)
+
+
+    
+</script>
+</html>
