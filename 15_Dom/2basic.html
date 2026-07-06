@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Releation</title>
 </head>
-<body>
-    
+
+<body style="background-color: #212121; color:#fff; font-weight: 700; text-align: center;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
+    </div>
 </body>
+<!-- lets see the manululition in the js  -->
+<script>
+
+// firs of all select the item with the help of the classname
+
+// const myclass = document.querySelectorAll('.day');
+// console.log(myclass);
+// // select the item wit the help of its parent class
+const parent = document.querySelector('.parent')
+// console.log(parent)
+// console.log(parent.children)
+
+// console.log(parent.children[1].innerHTML)
+
+// for (let index = 0; index < parent.children.length; index++) {
+//     console.log(parent.children[index].innerText);
+    
+// }
+
+// parent.children[2].style.backgroundColor = "red";
+// parent.children[2].style.border = "2px solid green";
+// // we can target the first and the last element of the tag 
+// console.log(parent.firstElementChild.textContent);
+// console.log(parent.lastElementChild.textContent);
+
+
+// we can select the parent element with the help of the child node 
+const mychild = document.querySelector('.day');
+// isse hamre my child me bass 1st element hi select hoga 
+console.log(mychild);
+
+//  now we can go to ist parent by the child node 
+console.log(mychild.parentElement);
+
+console.log(mychild.nextElementSibling);
+
+// in the dom ham jo bhi enter marte hai ya kuch likhte hai woh sabhi ek node me badal jata hai .. 1 enter ke baad dusra enter count nahi hota hai but ham ager kuch bhi likh dete hai toh woh count hota hai ham usko pata bhi kar sakte hai like hame parnet classs ke ander hamne 7 toh div mare hai then utne hi enter bhi 
+
+console.log("NODES: ", parent.childNodes);
+
+
+</script>
+
 </html>
