@@ -43,3 +43,11 @@ how to selecet the item by their classname and how to convert the htmlcollection
 here i change the innerText and the css property of wikipidia page b using the queyseletorall
 
 ![alt text](image-2.png)
+
+
+use of the parent adn children relation  and how to access all the item one by one
+
+![alt text](image-3.png)
+
+we can go to the child to the parent 
+![alt text](image-4.png)
