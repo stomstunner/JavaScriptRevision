@@ -51,3 +51,6 @@ use of the parent adn children relation  and how to access all the item one by o
 
 we can go to the child to the parent 
 ![alt text](image-4.png)
+
+now we are creating a element from skratch and app to page
+![alt text](image-5.png)
