@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    <div class="container">
+        <ul class="main-container">
+            <li><img width="200px" id="bluePaper" src="1.png" alt="BluePaper"></li>
+            <li><img width="200px" id="green" src="2.png" alt="green"></li>
+            <li><img width="200px" id="kai" src="3.png" alt="kai"></li>
+            <li><img width="200px" id="nevyBlue" src="4.png" alt="nevyBlue"></li>
+            <li><a style="color:rgb(8, 108, 196);"  href="https://google.com" id="google">Google</a></li>
+        </ul>
+        
+    </div>
+</body>
+<script>
+    // lets study ki event bubbling kya hota hai aur event proporgation kya hota hai 
+    // lets take the class of the outer lass main-container
+    // jiske ander hi hamra sara image hai
+
+
+    // document.querySelector('.main-container').addEventListener('click', function(event){
+    //     console.log('outer clicked');
+    // }, false)
+    // document.querySelector('#kai').addEventListener('click', function(event){
+    //     console.log('inner clicked');
+    // }, false)
+    // TODO hello 
+    // FIXME 
+    
+    
+    // but if we give the valur to the true in the place of flase that  change the proporgation of the code toh true likhne pe hamra outer pahle chalega then hamra inner chalega 
+    // document.querySelector('.main-container').addEventListener('click', function(event){
+    //     console.log('outer clicked');
+    // }, true)
+    // document.querySelector('#kai').addEventListener('click', function(event){
+    //     console.log('inner clicked');
+    // }, true)
+    
+    //  also we can stop the proporgation 
+
+    // document.querySelector('.main-container').addEventListener('click', function(event){
+    //     event.stopPropagation()
+    //     // isse hamra bubbing stop ho jayegai jo ander se bahar jaa rhai hai ya fir true likhne pe bhar se bubble ho ke ander aa ti hi woh bhi ruk sakti hai 
+    //     console.log('outer clicked');
+    // },false )
+    // document.querySelector('#kai').addEventListener('click', function(event){
+    //     console.log('inner clicked');
+    // }, true)
+
+    // we can change the behaviour of the a tag 
+    // document.getElementById("google").addEventListener('click', function(e){
+    //     e.stopPropagation()
+    //     e.preventDefault()
+    //     // prevent default karne se hamra behaviour of the a tag bdal gaya 
+    //     console.log('Clicked on the google');
+
+        
+    // })
+
+    // now we want ki ham page me kahi bhi click kare aur woh element remove ho jaye screen pe se 
+    document.querySelector('.main-container').addEventListener('click',function(event){
+        // so we want ki ham click kare aur uska namo nisan hat jaye 
+        // let removeEle = event.target.parentNode
+        // removeEle.remove()
+        // so if we use the above code for removing the itm and if we click on the li then it target the parent node that is ul and usko hi remove kar dega 
+        // so for that reason we mark a checkpoint to target ke tagname ko dekh sake aur image hoga tbahi code run karnege
+        if(event.target.tagName == 'IMG'){
+            console.log(event.target.id);
+            
+            let removeEle = event.target.parentNode
+            removeEle.remove()
+        }
+    }, false)
+</script>
+</html>
