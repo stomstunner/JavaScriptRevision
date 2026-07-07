@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h2>Hi!, there this is ujjwal</h2>
+    <button>Click Me</button>
+</body>
+<script>
+    // lets study about the setTimout function 
+
+    // setTimeout(function(){
+    //     console.log("hello");
+    //     // so in the settimeout fucntion we jsut managege the time ki ye kitne time baad taskqueue me jayega aur uske baad iske chala dena 1 baar 
+    // },2000)
+
+    // whereas in the setInterval fucntion we give the interval time jitne der ke baad har baar function ko chala dena 
+
+    // setInterval(function(){
+    //     console.log("ujjwal");
+        
+    // },2000)
+
+    // now we want ki ham 2 sec ke baad hamre h1 tag ke content ko change kar de 
+
+    // store the fucntion in the variable 
+    const changeName = function () {
+        document.querySelector('h2').innerHTML = "SupperMan"
+    }
+    // now we write the settimout fucntionjisme ki ham fucntion ke jagah ye refrence de dnge changname ka and set kar denge time ko 
+    
+    // setTimeout(changeName, 2000)
+
+    // dhayan rrahe ki yaha hamne fucntion ko call nhai karna hai bass uska naam likh dena hai jisse hamr afucntion settimout ke time ke baad chale
+
+    // now we wnat ki ham aissa fucntion likhe jo ki hamre settimout fucntion ko chalne se rok sake kyuki aissa bhi toh ho skata hai ki hame apne timout wlae fucntion ko rokna ho toh uske likye ham clear timout ka use karenge ... jaisse hi ham button pe clik kanre hmara timout khatam ho jayega 
+
+    // first of all store the timoutfunction in a variable
+
+    const changeMe = setTimeout(changeName, 2000)
+    
+    // aur ha varibale me rakhne se ye rukta nahi hai ye chalta hi jata hai  
+
+    // lets make a addEventListener jisme ham button ke clik hone pe settiomeout ko rok sake 
+
+    document.querySelector("button").addEventListener('click', function(){
+        // console.log('buffolo');
+        
+            clearTimeout(changeMe)
+            // yaha pe hame kis varibale ko stop karna hai woh dena hot ahai
+            console.log('hello');
+            
+    }, false)
+
+
+
+</script>
+</html>
