@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Calling</title>
+</head>
+<body style="background-color: #212121; color: #ffffff;">
+    <h1>hello</h1>
+</body>
+<script>
+    // lets study about how the xml words in the earlier days and what are the stages 
+
+    // first of all store the api url in a variable 
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+
+    // ab ye request karne ke liye varibale banao
+    const xhr = new XMLHttpRequest()
+
+    // then we use the open method to get the request only get 
+    xhr.open('GET',requestUrl)
+
+    // then we make a fucntion for onreadystagechange and pass a fucntion to it and in that fucntion all the stanging and work donen 
+    xhr.onreadystatechange = function(){
+        
+        console.log(xhr.readyState);// 4 per hamko apna data mil jata hai 
+        if(xhr.readyState === 4){
+            // ek variable banao jisme sara data response se jo aa rha hai usko store kar lo 
+            const data = JSON.parse(this.responseText)
+            console.log(data.followers);
+            
+        }
+        
+    };
+    xhr.send()
+
+
+</script>
+</html>
