@@ -48,3 +48,4 @@ let user1 = new userfun('ujjwal','ujjwal@gmail.com','ujjwalStrong')
 // now if i want to call that property for the user1 
 console.log( user1.encryptPassword());
 console.log( user1.changeUsername());
+// hello
